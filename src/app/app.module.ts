@@ -5,9 +5,9 @@ import { FormsModule } from "@angular/forms";
 // import { HttpModule } from "@angular/http";
 
 import { AppComponent } from "./app.component";
-import { FormBuilderComponent } from "./form-helper/form-builder/form-builder.component";
-import { FieldBuilderService } from "./form-helper/form-builder/field-builder.service";
-import { FormPlacerComponent } from "./form-helper/form-placer/form-placer.component";
+import { FormBuilderComponent } from "./form/form-builder.component";
+import { FieldBuilderService } from "./form/field-builder.service";
+import { FormPlacerComponent } from "./form/form-placer.component";
 // import { FormService } from "./form-helper/form-builder/form-builder.service";
 
 @NgModule({
@@ -22,7 +22,6 @@ import { FormPlacerComponent } from "./form-helper/form-placer/form-placer.compo
     ReactiveFormsModule
     // HttpModule
   ],
-  providers: [FieldBuilderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

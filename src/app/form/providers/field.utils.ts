@@ -3,7 +3,7 @@ import { TASK_ATTRIBUTE_TYPE } from "./constants";
 import * as lodash from "lodash";
 
 // @Injectable()
-export class FieldProviderCommon {
+export class FieldUtils {
   directions = {
     output: "output",
     input: "input"
@@ -12,7 +12,6 @@ export class FieldProviderCommon {
   getParameterDirections() {
     return this.directions;
   }
-
 
   getStructureFromAttributes(structure: string, attributes: any) {
     let returnValue = lodash.get(attributes, structure, []);
@@ -135,11 +134,9 @@ export class FieldProviderCommon {
 
       if (item.allowed) { control = "FieldListBox"; }
 
-      return { control };
+      return control;
     } catch (e) {
       return "FieldTextBox";
     }
-
   }
-
 }
